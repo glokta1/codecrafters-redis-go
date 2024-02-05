@@ -34,5 +34,6 @@ func handleConnection(conn net.Conn) {
 	readBuffer := make([]byte, 4096)
 	conn.Read(readBuffer)
 
-	conn.Write([]byte(PONG + PONG))
+	conn.Write([]byte(PONG))
+	conn.Write([]byte(PONG))
 }
